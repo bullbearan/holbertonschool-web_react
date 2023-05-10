@@ -9,7 +9,7 @@ module.exports = {
 		compress: true,
 	},
 	output: {
-		path: path.join(__dirname, "/../dist"),
+		path: path.resolve("./dist"),
 		filename: "bundle.js",
 	},
 	performance: {
