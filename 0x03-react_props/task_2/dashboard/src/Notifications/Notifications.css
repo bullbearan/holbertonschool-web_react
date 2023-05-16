@@ -1,0 +1,23 @@
+.Notifications {
+	position: relative;
+	border: 2px dashed #e0374f;
+	padding: 30px;
+	margin-bottom: 16px;
+	margin-top: 20px;
+}
+
+.btn-close {
+	width: 20px;
+	height: 20px;
+}
+
+li[data-notification-type="default"] {
+	color: blue;
+	margin-top: 15px;
+	margin-left: 40px;
+}
+
+li[data-notification-type="urgent"] {
+	color: red;
+	margin-left: 40px;
+}
