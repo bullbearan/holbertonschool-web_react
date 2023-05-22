@@ -19,7 +19,7 @@ const listNotifications = [
 	{ id: 3, type: "urgent", html: { __html: getLatestNotification() } },
 ];
 
-export default class App extends Component {
+class App extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -49,3 +49,5 @@ App.defaultProps = {
 App.propTypes = {
 	isLoggedIn: PropTypes.bool,
 };
+
+export default App;
