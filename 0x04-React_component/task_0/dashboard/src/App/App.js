@@ -30,12 +30,12 @@ export default class App extends Component {
 				<Notifications listNotifications={listNotifications} />
 				<div className="App">
 					<Header />
-					<div className="App-body">
-						{isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-					</div>
-					<div className="App-footer">
-						<Footer />
-					</div>
+				</div>
+				<div className="App-body">
+					{isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+				</div>
+				<div className="App-footer">
+					<Footer />
 				</div>
 			</React.Fragment>
 		);
