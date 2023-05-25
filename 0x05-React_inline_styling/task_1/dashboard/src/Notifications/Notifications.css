@@ -1,0 +1,10 @@
+li[data-notification-type="default"] {
+	color: blue;
+	margin-top: 15px;
+	margin-left: 40px;
+}
+
+li[data-notification-type="urgent"] {
+	color: red;
+	margin-left: 40px;
+}

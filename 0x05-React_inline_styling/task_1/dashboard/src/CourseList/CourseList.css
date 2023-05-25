@@ -1,0 +1,9 @@
+#CourseList thead tr:nth-child(2) th{
+	text-align: left;
+	border-top: 2px solid hsl(0,0%,86%);
+	border-bottom: 2px solid hsl(0,0%,86%);
+}
+
+#CourseList td {
+	margin-top: 2px;
+}
