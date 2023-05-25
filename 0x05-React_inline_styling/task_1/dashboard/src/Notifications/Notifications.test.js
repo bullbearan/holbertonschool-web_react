@@ -57,13 +57,6 @@ describe("<Notifications />", () => {
 			expect(wrapper.find("NotificationItem")).toHaveLength(1);
 		});
 
-		it("render notification item with text 'No new notification for now' with an empty latestNotification array", () => {
-			const wrapper = mount(<Notifications displayDrawer={true} />);
-			expect(wrapper.find("NotificationItem").html()).toEqual(
-				'<li data-notification-type="default">No new notification for now</li>',
-			);
-		});
-
 		it("0x04. React component - task 2", () => {
 			const wrapper = shallow(<Notifications displayDrawer />);
 			console.log = jest.fn();

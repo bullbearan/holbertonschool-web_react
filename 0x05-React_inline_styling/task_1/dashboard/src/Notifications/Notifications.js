@@ -24,7 +24,7 @@ class Notifications extends Component {
 		const { displayDrawer, listNotifications } = this.props;
 		return (
 			<React.Fragment>
-				<div className={css(styles.all)}>
+				<div className={css(styles.noP)}>
 					<p>Your notifications</p>
 				</div>
 				{displayDrawer && (
