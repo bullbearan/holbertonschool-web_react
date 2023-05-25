@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+const row = { backgroundColor: "#f5f5f5ab" };
+const header = { backgroundColor: "#deb5b545" };
+
 export default function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 	if (isHeader && textSecondCell === null) {
 		return (
@@ -11,15 +14,15 @@ export default function CourseListRow({ isHeader, textFirstCell, textSecondCell 
 	} else if (isHeader && textSecondCell !== null) {
 		return (
 			<tr>
-				<th style={{ backgroundColor: "#deb5b545" }}>{textFirstCell}</th>
-				<th style={{ backgroundColor: "#deb5b545" }}>{textSecondCell}</th>
+				<th style={header}>{textFirstCell}</th>
+				<th style={header}>{textSecondCell}</th>
 			</tr>
 		);
 	} else if (!isHeader) {
 		return (
 			<tr>
-				<td style={{ backgroundColor: "#f5f5f5ab" }}>{textFirstCell}</td>
-				<td style={{ backgroundColor: "#f5f5f5ab" }}>{textSecondCell}</td>
+				<td style={row}>{textFirstCell}</td>
+				<td style={row}>{textSecondCell}</td>
 			</tr>
 		);
 	}
