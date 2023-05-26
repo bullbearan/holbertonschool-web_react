@@ -51,7 +51,7 @@ export default class App extends Component {
 				<div className={css(styles.all)}>
 					<Header />
 				</div>
-				<div className={css(styles.bodynow)}>
+				<div className={css(styles.body)}>
 					{isLoggedIn ? (
 						<BodySectionWithMarginBottom title="Course list">
 							<CourseList listCourses={listCourses} />
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
 		boxSizing: "border-box",
 	},
 
-	bodynow: {
+	body: {
 		fontSize: "20px",
 		height: "60vh",
 		paddingTop: "80px",
