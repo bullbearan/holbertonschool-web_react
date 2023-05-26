@@ -24,11 +24,11 @@ class Notifications extends Component {
 		const { displayDrawer, listNotifications } = this.props;
 		return (
 			<React.Fragment>
-				<div className={css(styles.noP)}>
+				<div className={css(styles.menuItem)}>
 					<p>Your notifications</p>
 				</div>
 				{displayDrawer && (
-					<div className={css(styles.Notifications)}>
+					<div className={css(styles.notifications)}>
 						<button
 							style={{
 								position: "absolute",
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 		padding: '0px',
 	},
 
-	Notifications: {
+	notifications: {
 		position: "absolute",
 		border: "2px dashed #e0374f",
 		padding: "25px 15px",
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 		height: "20px",
 	},
 
-	noP: {
+	menuItem: {
 		textAlign: "right",
 		paddingRight: "15px",
 	},
