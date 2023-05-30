@@ -1,8 +1,13 @@
 import { shallow } from "enzyme";
 import CourseListRow from "./CourseListRow.js";
 import React from "react";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("<CourseList />", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("renders <CourseList /> component", () => {
 		shallow(<CourseListRow isHeader={true} textFirstCell="first" />);
 	});

@@ -1,8 +1,13 @@
 import { shallow } from "enzyme";
 import App from "./App";
 import React from "react";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("<App />", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("renders <App /> component", () => {
 		shallow(<App />);
 	});

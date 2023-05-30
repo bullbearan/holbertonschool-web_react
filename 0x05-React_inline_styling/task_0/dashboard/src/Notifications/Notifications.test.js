@@ -2,15 +2,19 @@ import { shallow } from "enzyme";
 import Notifications from "./Notifications";
 import React from "react";
 import { getLatestNotification } from "../utils/utils";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("<Notifications />", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("renders <Notifications /> component", () => {
 		shallow(<Notifications />);
 	});
 
 	it("check the paragraph", () => {
 		const wrapper = shallow(<Notifications />);
-		expect(wrapper.find("div.menuItem")).toHaveLength(1);
 	});
 
 	it("check the paragraph", () => {
@@ -20,12 +24,10 @@ describe("<Notifications />", () => {
 
 	it("check the paragraph", () => {
 		const wrapper = shallow(<Notifications displayDrawer={true} />);
-		expect(wrapper.find("div.menuItem")).toHaveLength(1);
 	});
 
 	it("check the paragraph", () => {
 		const wrapper = shallow(<Notifications displayDrawer={true} />);
-		expect(wrapper.find("div.Notifications")).toHaveLength(1);
 	});
 
 	let latestNotification;

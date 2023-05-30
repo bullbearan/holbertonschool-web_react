@@ -2,8 +2,13 @@ import { shallow } from "enzyme";
 import React from "react";
 import WithLogging from "./WithLogging";
 import Login from "../Login/Login";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("0x04-React_component - task 8", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("0x04-React_component - task 8", () => {
 		console.log = jest.fn();
 		const HOC = WithLogging(() => <p />);

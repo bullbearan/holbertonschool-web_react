@@ -1,8 +1,13 @@
 import { shallow } from "enzyme";
 import Footer from "./Footer.js";
 import React from "react";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("<Footer />", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("renders <Footer /> component", () => {
 		shallow(<Footer />);
 	});

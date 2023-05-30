@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./BodySection.css";
 
 export default class BodySection extends Component {
 	constructor(props) {

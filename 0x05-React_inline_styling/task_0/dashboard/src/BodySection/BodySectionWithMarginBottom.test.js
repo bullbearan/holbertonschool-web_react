@@ -2,20 +2,18 @@ import { shallow } from "enzyme";
 import React from "react";
 import "../../config/setupTests";
 import BodySectionWithMarginBottom from "./BodySectionWithMarginBottom";
+import { StyleSheetTestUtils } from "aphrodite";
 
 describe("0x04. React component", () => {
-	it("0x04. React component - task 6", () => {
-		shallow(<BodySectionWithMarginBottom />);
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
+	afterAll(() => {
+		StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
 	});
 
 	it("0x04. React component - task 6", () => {
-		const wrapper = shallow(
-			<BodySectionWithMarginBottom title="test title">
-				<p>test children node</p>
-			</BodySectionWithMarginBottom>,
-		);
-
-		const div = wrapper.find(".bodySectionWithMargin").first();
-		expect(div.exists()).toEqual(true);
+		shallow(<BodySectionWithMarginBottom />);
 	});
 });

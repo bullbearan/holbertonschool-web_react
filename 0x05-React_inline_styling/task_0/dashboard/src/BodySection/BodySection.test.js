@@ -1,8 +1,13 @@
 import { shallow } from "enzyme";
 import React from "react";
 import BodySection from "./BodySection";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("0x04. React component", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("0x04. React component - task 6", () => {
 		shallow(<BodySection />);
 	});

@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StyleSheet, css } from "aphrodite";
 
 const row = { backgroundColor: "#f5f5f5ab" };
 const header = { backgroundColor: "#deb5b545" };
 
 export default function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
+	const itemStyle = css(isHeader ? styles.th : styles.td);
 	if (isHeader && textSecondCell === null) {
 		return (
 			<tr>
@@ -14,15 +16,23 @@ export default function CourseListRow({ isHeader, textFirstCell, textSecondCell 
 	} else if (isHeader && textSecondCell !== null) {
 		return (
 			<tr>
-				<th style={header}>{textFirstCell}</th>
-				<th style={header}>{textSecondCell}</th>
+				<th className={itemStyle} style={header}>
+					{textFirstCell}
+				</th>
+				<th className={itemStyle} style={header}>
+					{textSecondCell}
+				</th>
 			</tr>
 		);
 	} else if (!isHeader) {
 		return (
 			<tr>
-				<td style={row}>{textFirstCell}</td>
-				<td style={row}>{textSecondCell}</td>
+				<td className={itemStyle} style={row}>
+					{textFirstCell}
+				</td>
+				<td className={itemStyle} style={row}>
+					{textSecondCell}
+				</td>
 			</tr>
 		);
 	}
@@ -38,3 +48,15 @@ CourseListRow.propTypes = {
 	textFirstCell: PropTypes.string.isRequired,
 	textSecondCell: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+
+const styles = StyleSheet.create({
+	th: {
+		textAlign: "left",
+		borderTop: "2px solid hsl(0, 0%, 86%)",
+		borderBottom: "2px solid hsl(0, 0%, 86%)",
+	},
+
+	td: {
+		marginTop: "2px",
+	},
+});

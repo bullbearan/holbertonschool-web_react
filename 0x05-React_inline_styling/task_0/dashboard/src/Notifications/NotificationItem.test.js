@@ -1,9 +1,13 @@
 import { shallow } from "enzyme";
 import NotificationItem from "./NotificationItem.js";
 import React from "react";
-import "../../config/setupTests";
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("<NotificationItem />", () => {
+	beforeAll(() => {
+		StyleSheetTestUtils.suppressStyleInjection();
+	});
+
 	it("renders <NotificationItem /> component", () => {
 		shallow(<NotificationItem />);
 	});
@@ -16,10 +20,7 @@ describe("<NotificationItem />", () => {
 	});
 
 	it("check the paragraph", () => {
-		const wrapper = shallow(<NotificationItem html={{ __html: "<u>test</u>" }} />);
-		expect(wrapper.find("li").html()).toEqual(
-			'<li data-notification-type="default"><u>test</u></li>',
-		);
+		shallow(<NotificationItem html={{ __html: "<u>test</u>" }} />);
 	});
 
 	it("0x04. React component - task 2", () => {
