@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Notifications.css";
-import closeIcon from "../assets/close-icon.png";
 import NotificationItem from "./NotificationItem";
 import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
@@ -41,7 +40,6 @@ class Notifications extends Component {
 							onClick={() => {
 								console.log("Close button has been clicked");
 							}}>
-							<img src={closeIcon} alt="close icon" className="btn-close"></img>
 						</button>
 						<p>Here is the list of notifications</p>
 						<ul>

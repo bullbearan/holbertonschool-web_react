@@ -1,7 +1,6 @@
 import { shallow } from "enzyme";
 import Login from "./Login.js";
 import React from "react";
-import "../../config/setupTests";
 
 describe("<Login />", () => {
 	it("renders <Login /> component", () => {

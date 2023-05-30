@@ -1,7 +1,6 @@
 import { shallow } from "enzyme";
 import Footer from "./Footer.js";
 import React from "react";
-import "../../config/setupTests";
 
 describe("<Footer />", () => {
 	it("renders <Footer /> component", () => {

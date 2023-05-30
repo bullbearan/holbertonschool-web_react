@@ -1,7 +1,6 @@
 import { shallow } from "enzyme";
 import CourseListRow from "./CourseListRow.js";
 import React from "react";
-import "../../config/setupTests";
 
 describe("<CourseList />", () => {
 	it("renders <CourseList /> component", () => {

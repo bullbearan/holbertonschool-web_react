@@ -1,7 +1,6 @@
 import { shallow } from "enzyme";
 import Header from "./Header.js";
 import React from "react";
-import "../../config/setupTests";
 
 describe("<Header />", () => {
 	it("renders <Header /> component", () => {

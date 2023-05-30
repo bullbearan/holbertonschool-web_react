@@ -1,6 +1,5 @@
 import { shallow } from "enzyme";
 import React from "react";
-import "../../config/setupTests";
 import BodySection from "./BodySection";
 
 describe("0x04. React component", () => {
