@@ -1,6 +1,6 @@
 import { Seq } from 'immutable';
 
-function capitalizetheletter(str) {
+export function capitalizetheletter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
@@ -13,6 +13,5 @@ export default function printBestStudents(object) {
       lastName: capitalizetheletter(student.lastName),
     }))
     .toJS();
-  
   console.log(students);
 }
