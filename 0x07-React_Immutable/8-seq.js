@@ -14,5 +14,5 @@ export default function printBestStudents(object) {
     }))
     .toObject();
   
-    console.log(students);
+  console.log(students);
 }
