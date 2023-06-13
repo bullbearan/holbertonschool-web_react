@@ -1,7 +1,10 @@
 import { Seq } from 'immutable';
 
+function capitalizetheletter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export default function printBestStudents(object) {
-  const capitalizetheletter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
   const students = Seq(object)
     .filter((grade) => grade.score > 70)
     .map((student) => ({
