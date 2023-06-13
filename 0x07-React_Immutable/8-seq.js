@@ -5,7 +5,7 @@ export default function printBestStudents(object) {
   const students = Seq(object)
     .filter((grade) => grade.score > 70)
     .map((student) => ({
-      score: student.score,
+      ...student,
       firstName: capitalizetheletter(student.firstName),
       lastName: capitalizetheletter(student.lastName),
     }))
