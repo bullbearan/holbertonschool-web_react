@@ -11,7 +11,8 @@ export default function printBestStudents(object) {
       score: student.score,
       firstName: capitalize(student.firstName),
       lastName: capitalize(student.lastName),
-    })).toObject();
+    }))
+    .toObject();
   
     console.log(students);
 }
