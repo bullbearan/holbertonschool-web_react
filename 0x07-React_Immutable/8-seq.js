@@ -12,7 +12,7 @@ export default function printBestStudents(object) {
       firstName: capitalize(student.firstName),
       lastName: capitalize(student.lastName),
     }))
-    .toObject();
+    .toJS();
   
   console.log(students);
 }
